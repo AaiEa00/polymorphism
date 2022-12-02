@@ -1,0 +1,17 @@
+GameObject
+└Character
+　└Player
+　　└Warrior
+　　└mage
+　　└etc...
+　└Monster
+　　└golem
+　　└etc...
+　　
+テキスト(バイナリ)ファイルからデータを読み取る
+iostream
+
+【チャレンジ】
+ResourceManagerクラスからインスタンスに
+データを設定
+データが1つにまとまっている
