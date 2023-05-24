@@ -1,18 +1,17 @@
-#include "Vector2.h"
+#include "vector2.h"
 
+using namespace std;
+using namespace gameMath;
 
-using namespace GameMath;
-
-const Vector2 Vector2::Right{ 1.0f, 0.0f };
-const Vector2 Vector2::Up{ 0.0f, 1.0f };
-const Vector2 Vector2::Zero{ 0.0f, 0.0f };
+const vector2 vector2::right{ 1.0f, 0.0f };
+const vector2 vector2::up{ 0.0f, 1.0f };
+const vector2 vector2::zero{ 0.0f, 0.0f };
 
 
 /// <summary>
 /// デフォルトコンストラクタ
 /// </summary>
-/// <returns></returns>
-Vector2::Vector2()
+vector2::vector2()
 {
 	x = y = 0.0f;
 }
@@ -23,8 +22,7 @@ Vector2::Vector2()
 /// </summary>
 /// <param name="xx"></param>
 /// <param name="yy"></param>
-/// <returns></returns>
-Vector2::Vector2(float xx, float yy)
+vector2::vector2(float xx, float yy)
 {
 	x = xx;
 	y = yy;
@@ -35,8 +33,7 @@ Vector2::Vector2(float xx, float yy)
 /// コピーコンストラクタ
 /// </summary>
 /// <param name="v"></param>
-/// <returns></returns>
-Vector2::Vector2(const Vector2& v)
+vector2::vector2(const vector2& v)
 {
 	x = v.x;
 	y = v.y;
@@ -48,11 +45,9 @@ Vector2::Vector2(const Vector2& v)
 /// </summary>
 /// <param name="v"></param>
 /// <returns></returns>
-Vector2 Vector2::operator+(const Vector2& v)
-const
+vector2 vector2::operator+(const vector2& v) const
 {
-	Vector2 u =
-	{
+	vector2 u =	{
 		x + v.x,
 		y + v.y
 	};
@@ -67,27 +62,28 @@ const
 /// </summary>
 /// <param name="v"></param>
 /// <returns></returns>
-Vector2 Vector2::operator-(const Vector2& v) const
+vector2 vector2::operator-(const vector2& v) const
 {
-	Vector2 u =
-	{
+	vector2 u = {
 		x - v.x,
 		y - v.y
 	};
+
 	return u;
 }
 
 /// <summary>
-/// Vector2用出力ストリーム
+/// vector2用出力ストリーム
 /// </summary>
 /// <param name="os"></param>
 /// <param name="v"></param>
 /// <returns></returns>
-std::ostream& GameMath::operator<<(
+std::ostream& gameMath::operator<<(
 	std::ostream& os,
-	const Vector2& v
+	const vector2& v
 ) {
 	os << '(' << v.x << ", " << v.y << ')';
+
 	return os;
 }
 
@@ -98,13 +94,13 @@ std::ostream& GameMath::operator<<(
 /// <param name="v"></param>
 /// <param name="f"></param>
 /// <returns></returns>
-Vector2 GameMath::operator*(const Vector2& v, float f)
+vector2 gameMath::operator*(const vector2& v, float f)
 {
-	Vector2 u =
-	{
+	vector2 u =	{
 		v.x * f,
 		v.y * f
 	};
+
 	return u;
 }
 
@@ -114,13 +110,13 @@ Vector2 GameMath::operator*(const Vector2& v, float f)
 /// <param name="f"></param>
 /// <param name="v"></param>
 /// <returns></returns>
-Vector2 GameMath::operator*(float f, const Vector2& v)
+vector2 gameMath::operator*(float f, const vector2& v)
 {
-	Vector2 u =
-	{
+	vector2 u =	{
 		v.x * f,
 		v.y * f
 	};
+
 	return u;
 }
 
@@ -129,11 +125,11 @@ Vector2 GameMath::operator*(float f, const Vector2& v)
 /// </summary>
 /// <param name="v"></param>
 /// <returns></returns>
-const Vector2& Vector2::operator=(const Vector2& v)
+const vector2& vector2::operator=(const vector2& v)
 {
-	//std::cout << "代入" << std::endl;
 	x = v.x;
 	y = v.y;
+
 	return *this;
 }
 
@@ -142,10 +138,11 @@ const Vector2& Vector2::operator=(const Vector2& v)
 /// </summary>
 /// <param name="v"></param>
 /// <returns></returns>
-Vector2& GameMath::Vector2::operator+=(const Vector2& v)
+vector2& gameMath::vector2::operator+=(const vector2& v)
 {
 	x += v.x;
 	y += v.y;
+
 	return *this;
 }
 
@@ -154,10 +151,11 @@ Vector2& GameMath::Vector2::operator+=(const Vector2& v)
 /// </summary>
 /// <param name="v"></param>
 /// <returns></returns>
-Vector2& GameMath::Vector2::operator-=(const Vector2& v)
+vector2& gameMath::vector2::operator-=(const vector2& v)
 {
 	x -= v.x;
 	y -= v.y;
+
 	return *this;
 }
 
@@ -166,10 +164,11 @@ Vector2& GameMath::Vector2::operator-=(const Vector2& v)
 /// </summary>
 /// <param name="f">実数</param>
 /// <returns></returns>
-Vector2& GameMath::Vector2::operator*=(const float& f)
+vector2& gameMath::vector2::operator*=(const float& f)
 {
 	x *= f;
 	y *= f;
+
 	return *this;
 }
 
@@ -180,7 +179,7 @@ Vector2& GameMath::Vector2::operator*=(const float& f)
 /// <param name="u"></param>
 /// <param name="v"></param>
 /// <returns></returns>
-float Vector2::Dot(const Vector2& u, const Vector2& v)
+float vector2::dot(const vector2& u, const vector2& v)
 {
 	return u.x * v.x + u.y * v.y;
 }
@@ -192,14 +191,19 @@ float Vector2::Dot(const Vector2& u, const Vector2& v)
 /// <param name="u"></param>
 /// <param name="v"></param>
 /// <returns></returns>
-float Vector2::Cross(const Vector2& u, const Vector2& v)
+float vector2::cross(const vector2& u, const vector2& v)
 {
 	return u.x * v.y - u.y * v.x;
 }
 
-Vector2 GameMath::Vector2::Normalize(const Vector2& p)
+/// <summary>
+/// 正規化
+/// </summary>
+/// <param name="p"></param>
+/// <returns></returns>
+vector2 gameMath::vector2::normalize(const vector2& p)
 {
 	float mp = p.magnitude();
-	Vector2 result{ p.x / mp, p.y / mp };
+	vector2 result{ p.x / mp, p.y / mp };
 	return result;
 }

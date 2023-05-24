@@ -1,21 +1,24 @@
 #pragma once
-#include "GameObject.h"
-class Character :
-	public GameObject
+#include "gameObject.h"
+
+class character :
+	public gameObject
 {
+// メンバ
 protected:
-	int HitPoints;		// HP
-	int MagicPoints;	// MP
+	int hitPoints;
+	int magicPoints;
 
 // コンストラクタ・デストラクタ
 public:
-	Character();
-	Character(const Vector2& Position, int HP, int MP);
+	character();
+	character(const vector2& Pos, int HP, int MP);
 
-	virtual ~Character() {};
+	virtual ~character() {};
 
+// インターフェース
 public:
-	virtual int Update();	// 状態更新
-	virtual int Draw();		// 描画
+	virtual int update();	// 状態更新
+	virtual int draw();		// 描画
 };
 

@@ -1,26 +1,26 @@
 #pragma once
-#include "Vector2.h"
-using namespace GameMath;
+#include "vector2.h"
+using namespace gameMath;
 using namespace std;
 
 /// <summary>
 /// 基底クラス
 /// </summary>
-class GameObject {
+class gameObject {
+
 // メンバ
 protected:
-	Vector2 Position;	// 座標
+	vector2 position;
 
 // コンストラクタ・デストラクタ
 public:
-	GameObject();
-	GameObject(const Vector2& pos);
+	gameObject();
+	gameObject(const vector2& pos);
 
-	virtual ~GameObject(){ cout << "~GameObject()" << endl; }
+	virtual ~gameObject() {}
 
 // ゲーム用インターフェース
-// 仮想関数化
 public:
-	virtual int Update() = 0;	// 状態更新
-	virtual int Draw() = 0;		// 描画
+	virtual int update() = 0;	// 状態更新
+	virtual int draw() = 0;		// 描画
 };

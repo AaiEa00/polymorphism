@@ -1,34 +1,34 @@
-#include "GameObject.h"
+#include "gameObject.h"
 using namespace std;
 
 /// <summary>
 /// デフォルトコンストラクタ
 /// </summary>
-/// <returns></returns>
-GameObject::GameObject()
+gameObject::gameObject()
 {
-	m_pos = Vector2::Zero;
-	cout << "GameObject()" << m_pos << endl;
+	position = vector2::zero;
+	cout << "gameObject::gameObject()" << endl
+		<< "  pos: " << position << endl;
 }
 
 /// <summary>
 /// 初期化子コンストラクタ
 /// </summary>
-/// <param name="p"></param>
-/// <returns></returns>
-GameObject::GameObject(const Vector2& p)
+/// <param name="p">座標</param>
+gameObject::gameObject(const vector2& pos)
 {
-	m_pos = p;
-	cout << "GameObject(p)" << m_pos << endl;
+	position = pos;
+	cout << "gameObject::gameObject(pos)" << endl
+		<< "  pos: " << position << endl;
 }
 
 /// <summary>
 /// 状態更新
 /// </summary>
 /// <returns></returns>
-int GameObject::Update()
+int gameObject::update()
 {
-	cout << "GameObject::Update(): pos: " << m_pos << endl;
+	cout << "gameObject::update()" << endl;
 	return 0;
 }
 
@@ -36,8 +36,8 @@ int GameObject::Update()
 /// 描画
 /// </summary>
 /// <returns></returns>
-int GameObject::Draw()
+int gameObject::draw()
 {
-	cout << "GameObject::Draw(): pos: " << m_pos << endl;
+	cout << "gameObject::draw()" << endl;
 	return 0;
 }

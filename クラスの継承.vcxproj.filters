@@ -13,42 +13,119 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\character">
+      <UniqueIdentifier>{b239e357-7f86-48b8-b3db-8c9f75c55d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\character\monster">
+      <UniqueIdentifier>{81792f14-40f3-4e25-b72b-c30e2c0d784c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\character\player">
+      <UniqueIdentifier>{ec21e0b3-7efb-456f-86f3-b166094688f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character">
+      <UniqueIdentifier>{17249d86-5845-4356-ad5b-9c1460ea70aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character\player">
+      <UniqueIdentifier>{490dbad6-6b9a-4169-8163-78c4ae6bf5a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character\monster">
+      <UniqueIdentifier>{07ad7fc9-a7ec-4e38-a050-d7db36012f07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Script\GameObject.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Script\Player.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Script\Vector2.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Script\Monster.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Script\Character.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Script\GameObject.cpp">
+    <ClCompile Include="Script\gameObject.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Script\main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Script\Player.cpp">
+    <ClCompile Include="Script\vector2.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Script\Vector2.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="Script\character.cpp">
+      <Filter>ソース ファイル\character</Filter>
     </ClCompile>
-    <ClCompile Include="Script\Monster.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="Script\monster\golem.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
     </ClCompile>
-    <ClCompile Include="Script\Character.cpp">
-      <Filter>ソース ファイル</Filter>
+    <ClCompile Include="Script\monster\monster.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
     </ClCompile>
+    <ClCompile Include="Script\monster\slime.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\monster\wraith.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\player\hero.cpp">
+      <Filter>ソース ファイル\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\player\mage.cpp">
+      <Filter>ソース ファイル\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\player\monk.cpp">
+      <Filter>ソース ファイル\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\player\player.cpp">
+      <Filter>ソース ファイル\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\player\warrior.cpp">
+      <Filter>ソース ファイル\character\player</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\monster\boss.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Script\monster\dragon.cpp">
+      <Filter>ソース ファイル\character\monster</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Script\gameObject.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\vector2.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\character.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\golem.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\monster.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\slime.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\wraith.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\player\hero.h">
+      <Filter>ヘッダー ファイル\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\player\mage.h">
+      <Filter>ヘッダー ファイル\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\player\monk.h">
+      <Filter>ヘッダー ファイル\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\player\player.h">
+      <Filter>ヘッダー ファイル\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\player\warrior.h">
+      <Filter>ヘッダー ファイル\character\player</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\boss.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Script\monster\dragon.h">
+      <Filter>ヘッダー ファイル\character\monster</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Script\data.txt">
+      <Filter>リソース ファイル</Filter>
+    </Text>
   </ItemGroup>
 </Project>

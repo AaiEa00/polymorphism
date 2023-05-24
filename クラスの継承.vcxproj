@@ -19,19 +19,40 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Script\Character.h" />
-    <ClInclude Include="Script\Monster.h" />
-    <ClInclude Include="Script\GameObject.h" />
-    <ClInclude Include="Script\Player.h" />
-    <ClInclude Include="Script\Vector2.h" />
+    <ClCompile Include="Script\character.cpp" />
+    <ClCompile Include="Script\gameObject.cpp" />
+    <ClCompile Include="Script\main.cpp" />
+    <ClCompile Include="Script\monster\boss.cpp" />
+    <ClCompile Include="Script\monster\dragon.cpp" />
+    <ClCompile Include="Script\monster\golem.cpp" />
+    <ClCompile Include="Script\monster\monster.cpp" />
+    <ClCompile Include="Script\monster\slime.cpp" />
+    <ClCompile Include="Script\monster\wraith.cpp" />
+    <ClCompile Include="Script\player\hero.cpp" />
+    <ClCompile Include="Script\player\mage.cpp" />
+    <ClCompile Include="Script\player\monk.cpp" />
+    <ClCompile Include="Script\player\player.cpp" />
+    <ClCompile Include="Script\player\warrior.cpp" />
+    <ClCompile Include="Script\vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Script\Character.cpp" />
-    <ClCompile Include="Script\Monster.cpp" />
-    <ClCompile Include="Script\GameObject.cpp" />
-    <ClCompile Include="Script\main.cpp" />
-    <ClCompile Include="Script\Player.cpp" />
-    <ClCompile Include="Script\Vector2.cpp" />
+    <ClInclude Include="Script\character.h" />
+    <ClInclude Include="Script\gameObject.h" />
+    <ClInclude Include="Script\monster\boss.h" />
+    <ClInclude Include="Script\monster\dragon.h" />
+    <ClInclude Include="Script\monster\golem.h" />
+    <ClInclude Include="Script\monster\monster.h" />
+    <ClInclude Include="Script\monster\slime.h" />
+    <ClInclude Include="Script\monster\wraith.h" />
+    <ClInclude Include="Script\player\hero.h" />
+    <ClInclude Include="Script\player\mage.h" />
+    <ClInclude Include="Script\player\monk.h" />
+    <ClInclude Include="Script\player\player.h" />
+    <ClInclude Include="Script\player\warrior.h" />
+    <ClInclude Include="Script\vector2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Script\data.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -44,26 +65,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>

@@ -1,26 +1,51 @@
 #include "Character.h"
+using namespace std;
 
-Character::Character():GameObject(Vector2::Zero)
+/// <summary>
+/// デフォルトコンストラクタ
+/// </summary>
+character::character()
+	: gameObject(vector2::zero)
 {
-	HitPoints = 0;
-	MagicPoints = 0;
+	hitPoints = 0;
+	magicPoints = 0;
+
+	cout << "character::character()" << endl
+		<< "hp: " << hitPoints << ", mp: " << magicPoints << endl;
 }
 
-Character::Character(const Vector2& Position, int HP, int MP)
-	:GameObject(Position)
+/// <summary>
+/// 初期化子コンストラクタ
+/// </summary>
+/// <param name="Pos">座標</param>
+/// <param name="HP">HP</param>
+/// <param name="MP">MP</param>
+character::character(const vector2& Pos, int HP, int MP)
+	:gameObject(Pos)
 {
-	HitPoints = HP;
-	MagicPoints = MP;
+	hitPoints = HP;
+	magicPoints = MP;
+
+	cout << "character::character(Pos, HP, MP)" << endl
+		<< "  hp: " << hitPoints << ", mp: " << magicPoints << endl;
 }
 
-int Character::Update()
+/// <summary>
+/// 状態更新
+/// </summary>
+/// <returns></returns>
+int character::update()
 {
-	cout << "Character::Update()" << endl;
+	cout << "character::update()" << endl;
 	return 0;
 }
 
-int Character::Draw()
+/// <summary>
+/// 描画
+/// </summary>
+/// <returns></returns>
+int character::draw()
 {
-	cout << "Character::Draw()" << endl;
+	cout << "character::draw()" << endl;
 	return 0;
 }

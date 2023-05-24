@@ -5,34 +5,34 @@
 /// <summary>
 /// 数学ライブラリ（前方宣言）
 /// </summary>
-namespace GameMath
+namespace gameMath
 {
-	class Vector2;
+	class vector2;
 
-	// Vector2 出力ストリーム
+	// vector2 出力ストリーム
 	std::ostream& operator<<
 		(
 			std::ostream& os,
-			const Vector2& v
+			const vector2& v
 		);
 
-	// Vector2 実数倍
-	Vector2 operator*(const Vector2& v, float f);
-	Vector2 operator*(float f, const Vector2& v);
+	// vector2 実数倍
+	vector2 operator*(const vector2& v, float f);
+	vector2 operator*(float f, const vector2& v);
 }
 
 
 /// <summary>
 /// ゲーム数学ライブラリ
 /// </summary>
-namespace GameMath
+namespace gameMath
 {
-	class Vector2
+	class vector2
 	{
 	public:
-		static const Vector2 Right;
-		static const Vector2 Up;
-		static const Vector2 Zero;
+		static const vector2 right;
+		static const vector2 up;
+		static const vector2 zero;
 
 	private:
 		float x;	// X成分
@@ -40,55 +40,55 @@ namespace GameMath
 
 		// コンストラクタ／デストラクタ
 	public:
-		Vector2();
-		Vector2(float xx, float yy);
-		Vector2(const Vector2& v);
+		vector2();
+		vector2(float xx, float yy);
+		vector2(const vector2& v);
 
 		// getter / setter
 	public:
-		inline float GetX() { return x; }
-		inline float GetY() { return y; }
+		inline float getX() { return x; }
+		inline float getY() { return y; }
 
-		inline float SetX(float xx) { return x = xx; }
-		inline float SetY(float yy) { return y = yy; }
+		inline float setX(float xx) { return x = xx; }
+		inline float setY(float yy) { return y = yy; }
 
 		// 演算子のオーバーロード
 	public:
-		Vector2 operator+(const Vector2& v) const;	// 加算
-		Vector2 operator-(const Vector2& v) const;	// 減算
+		vector2 operator+(const vector2& v) const;	// 加算
+		vector2 operator-(const vector2& v) const;	// 減算
 
 		// 実数倍
-		friend Vector2 operator*(const Vector2& v, float f);
-		friend Vector2 operator*(float f, const Vector2& v);
+		friend vector2 operator*(const vector2& v, float f);
+		friend vector2 operator*(float f, const vector2& v);
 		
-		const Vector2& operator=(const Vector2& v);	// 代入
+		const vector2& operator=(const vector2& v);	// 代入
 
 		// 演算代入 += -= *=
-		Vector2& operator+=(const Vector2& v);
-		Vector2& operator-=(const Vector2& v);
-		Vector2& operator*=(const float& f);
+		vector2& operator+=(const vector2& v);
+		vector2& operator-=(const vector2& v);
+		vector2& operator*=(const float& f);
 
 		// 静的関数（クラス関数）
 	public:
-		static float Dot(const Vector2& u, const Vector2& v);		// 内積
-		static float Cross(const Vector2& u, const Vector2& v);		// 外積
+		static float dot(const vector2& u, const vector2& v);		// 内積
+		static float cross(const vector2& u, const vector2& v);		// 外積
 
 		// 正規化ベクトルを求める
-		static Vector2 Normalize(const Vector2& p);
+		static vector2 normalize(const vector2& p);
 
 		// ユーティリティ
 	public:
 		// ベクトルの大きさ
 		inline float magnitude() const { return sqrtf(x * x + y * y); }
 		// 正規化ベクトル
-		inline Vector2 normalized() const { return Vector2::Normalize(*this); }
+		inline vector2 normalized() const { return vector2::normalize(*this); }
 
 		// 入出力ストリーム
 	public:
 		friend std::ostream& operator<<
 			(
 				std::ostream& os,
-				const Vector2& v
+				const vector2& v
 			);
 	};
 }
